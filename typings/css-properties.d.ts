@@ -5,7 +5,11 @@ type CSSWideKeyword = 'initial' | 'inherit' | 'unset'
 
 // Based on [CSSProperties from React types](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts)
 export interface CSSProperties {
-
+   /**
+   * Glamorous-specific property which contains any of the following CSS definitions
+   */
+  css?: CSSProperties
+  
   /**
    * Aligns a flex container's lines within the flex container when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
    */
@@ -427,7 +431,7 @@ export interface CSSProperties {
    * The counter-reset property contains a list of one or more names of counters, each one optionally followed by an integer (otherwise, the integer defaults to 0.) Each time the given element is invoked, the counters specified by the property are set to the given integer.
    */
   counterReset?: CSSWideKeyword | string | number
-
+  
   /**
    * The cue property specifies sound files (known as an "auditory icon") to be played by speech media agents before and after presenting an element's content; if only one file is specified, it is played both before and after. The volume at which the file(s) should be played, relative to the volume of the main element, may also be specified. The icon files may also be set separately with the cue-before and cue-after properties.
    */
