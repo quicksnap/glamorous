@@ -1933,3 +1933,7 @@ export interface CSSProperties
   extends CSSPropertiesComplete,
     CSSPropertiesPseudo,
     CSSPropertiesLossy {}
+
+export type CSSPropertiesRecursive = CSSProperties | CSSPropertiesArray
+
+export interface CSSPropertiesArray extends Array<CSSPropertiesRecursive> {}
