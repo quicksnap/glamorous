@@ -1933,6 +1933,14 @@ export interface CSSProperties
     CSSPropertiesPseudo,
     CSSPropertiesLossy {}
 
-export type CSSPropertiesRecursive = CSSProperties | CSSPropertiesArray
+export type CSSPropertiesRecursive =
+  | CSSProperties
+  | CSSPropertiesArray
+  | CSSFunction
+  | {}
+
+export interface CSSFunction {
+  (props: {}): CSSPropertiesRecursive
+}
 
 export interface CSSPropertiesArray extends Array<CSSPropertiesRecursive> {}

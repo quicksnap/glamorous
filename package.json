@@ -1,6 +1,6 @@
 {
-  "name": "glamorous",
-  "version": "0.0.0-semantically-released",
+  "name": "@quicksnap/glamorous",
+  "version": "4.12.0",
   "description": "React component styling solved",
   "main": "dist/glamorous.cjs.js",
   "jsnext:main": "dist/glamorous.esm.js",
